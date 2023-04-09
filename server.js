@@ -14,7 +14,9 @@ app.use(express.json());
 app.use(express.static(path.join(__dirname, "/public")));
 app.use("/subdir", express.static(path.join(__dirname, "/public")));
 
+//routes
 app.use("/subdir", require("./routes/subdir"));
+app.use("/register", require("./routes/register"));
 
 app.use("/employees", require("./routes/subdir/employees"));
 app.use("/", request("./routes/root"));
