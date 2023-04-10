@@ -16,8 +16,10 @@ app.use("/subdir", express.static(path.join(__dirname, "/public")));
 
 //routes
 app.use("/subdir", require("./routes/subdir"));
+//register route
 app.use("/register", require("./routes/register"));
-
+//auth route
+app.use("/auth", require("./routes/auth"));
 app.use("/employees", require("./routes/subdir/employees"));
 app.use("/", request("./routes/root"));
 
